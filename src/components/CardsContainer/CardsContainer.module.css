@@ -1,0 +1,7 @@
+.root { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 20px;
+    padding: 50px;
+}
