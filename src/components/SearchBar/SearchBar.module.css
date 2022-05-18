@@ -1,0 +1,33 @@
+/* https://www.flaticon.es/packs/font-awesome */
+
+.button {   
+    background-color: transparent;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border: none;
+}
+.inputText {
+    border-radius: 50px;
+    width: 500px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}   
+
+.form { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inputText::placeholder{ 
+    padding: 10px;
+    color: white;
+}
+
+.img{ 
+    width: 36px;
+    height: 36px;   
+}
