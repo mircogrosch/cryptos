@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import SearchBar from "./components/SearchBar/SearchBar";
-import CardsContainer from "./components/CardsContainer/CardsContainer";
 import axios from "axios";
+import { Route } from "react-router-dom";
+import Home from "./components/Home/Home";
+import DetailCrypto from "./components/DetailCrypto/DetailCrypto";
 
 function App() {
   const [cryptos, setCryptos] = useState([]);
@@ -19,10 +20,17 @@ function App() {
   }, []);
 
   return (
-    <>
-      <SearchBar />
-      <CardsContainer response={cryptos} />
-    </>
+    <div>
+      <Route
+        exact
+        path="/"
+        render={() => {
+          return <Home response={cryptos} />;
+        }}
+      />
+
+      <Route exact path="/crypto/:id" component={DetailCrypto} />
+    </div>
   );
 }
 
