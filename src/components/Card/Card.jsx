@@ -1,9 +1,15 @@
 import React from "react";
 import style from './Card.module.css';
+import { Link } from "react-router-dom";
 
-const Card = ({image,symbol,name,current_price,price_change_percentage_24h})=> { 
+const Card = ({id,image,symbol,name,current_price,price_change_percentage_24h})=> { 
+
     return (
+  
         <div className={style.root}> 
+          <Link to={`/crypto/${id}`}>
+        <button > SHOW</button>
+        </Link>
             <div className={style.containerImg}> 
                 <img src={image} alt='IconCrypto'/>
             </div>
@@ -13,8 +19,10 @@ const Card = ({image,symbol,name,current_price,price_change_percentage_24h})=> {
                 <h2> {current_price} </h2>
                 <span> {`${price_change_percentage_24h} %`}</span>
             </div>
-
+            
         </div>
+        
+        
     )
 }
 

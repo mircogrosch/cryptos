@@ -1,0 +1,7 @@
+export const type = {
+  GET_CRYPTOS: "GET_CRYPTOS",
+  GET_DETAIL: "GET_DETAIL",
+  ADD_FAVS: "ADD_FAVS",
+  REMOVE_FAVS: "REMOVE_FAVS",
+  GET_FAVS: "GET_FAVS",
+};
