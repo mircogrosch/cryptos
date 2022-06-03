@@ -11,3 +11,18 @@ export const getCryptos = () => {
       });
   };
 };
+
+export const addFavs = (valores) => {
+  return{
+    type: ADD_FAVS,
+    payload: valores
+  }
+}
+
+export const removeFavs = (payload) => {
+  return {
+    type: REMOVE_FAVS,
+    payload,
+  }
+}
+
