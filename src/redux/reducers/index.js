@@ -19,7 +19,7 @@ export const rootReducer = (state = initialState, action) => {
         cryptoDetail: action.payload,
       };
     }
-    case 
+    // case 
 
     default: {
       return state;

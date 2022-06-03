@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import style from './SearchBar.module.css'
 import searchIcon from '../../img/magnifying-glass.png';
+import DropDown from "../DropDown/DropDown";
 
 const SearchBar = ()=> { 
     const [input, setInput] = useState("");
@@ -16,12 +17,16 @@ const SearchBar = ()=> {
     console.log('ESTE ES EL VALOR DEL INPUT', input)
 
     return (
+    <>
+        <DropDown/>
         <form onSubmit={(e) => handleSubmit(e)} className={style.form}> 
             <input type='text' onChange={handleChande} placeholder={'Search any crypto'} className={style.inputText}/>
             <button type="submit" className={style.button}> 
                 <img src={searchIcon} className={style.img} alt='crypto'/>
             </button>
         </form>
+
+    </>
     );
 }
 
